@@ -16,7 +16,7 @@ while True:
             sys.exit()
 
 
-        screen.fill('black')
+        screen.fill('grey')
         level .run()
 
         pygame.display.update()

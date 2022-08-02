@@ -38,4 +38,4 @@ class Coin(AnimatedTile):
         super().__init__(size,x,y,path)
         center_x = x + int(size / 2)
         center_y = y + int(size / 2)
-        self.rect = self.image.get_rect(center = (center_x,cemter_y))
+        self.rect = self.image.get_rect(center = (center_x,center_y))

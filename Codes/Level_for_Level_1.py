@@ -13,13 +13,7 @@ class Level:
         self.world_shift = 0
 
         #player
-        player_layout = import_csv_layout(level_data['player'])
-        self.player = pygame.sprite.GroupSingle()
-        self.goal = pygame.sprite.GroupSingle()
-        self.player_setup(player_layout)
-
-        #player
-        player_layout = import_csv_layout(level_data['player'])
+        player_layout = import_csv_layout(level_data['Start and End'])
         self.player = pygame.sprite.GroupSingle()
         self.goal = pygame.sprite.GroupSingle()
         self.player_setup(player_layout)
@@ -93,7 +87,7 @@ class Level:
                 if val == '0':
                    print('Player goes here')
                 if val == '1':
-                    hat_surface = pygame.image.load('../Graphics/setup_tiles.png').convert_alpha()
+                    hat_surface = pygame.image.load('../CS Game Project/Graphics/setup_tiles.png').convert_alpha()
                     sprite = StaticTile(tile_size,x,y,hat_surface)
                     self.goal.add(sprite)
         

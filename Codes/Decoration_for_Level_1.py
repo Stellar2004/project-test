@@ -1,7 +1,7 @@
-from Codes.Tiles_for_Level_1 import AnimatedTile
+from Tiles_for_Level_1 import AnimatedTile
 from Settings_for_Level_1 import vertical_tile_number, tile_size, screen_width
 import pygame
-from Tiles_for_Level_1 import AnimatedTile
+from Tiles_for_Level_1 import AnimatedTile, StaticTile
 from Support_for_Level_1 import import_folder
 from random import choice, randint
 
@@ -46,7 +46,7 @@ class Water:
         self.water_sprites.draw(surface)
 
 class Clouds:
-    def __init__(self,horizon,level_width,clound_number):
+    def __init__(self,horizon,level_width,cloud_number):
         cloud_surf_list = import_folder('../Graphics/clouds')
         min_x = -screen_width
         max_x = level_width + screen_width

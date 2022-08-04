@@ -1,8 +1,7 @@
-from tkinter.tix import Tree
 import pygame
 from Support_for_Level_1 import import_csv_layout, import_cut_graphics
 from Settings_for_Level_1 import tile_size, screen_height
-from Tiles_for_Level_1 import Tile, StaticTile, Coin
+from Tiles_for_Level_1 import Tile, StaticTile, Coin, Tree
 from Enemy_for_Level_1 import Enemy
 from Decoration_for_Level_1 import Sky, Water, Clouds
 
@@ -57,17 +56,17 @@ class Level:
                     y = row_index * tile_size
 
                     if type == 'terrain':
-                        terrain_tile_list = import_cut_graphics('../Graphics/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png')
+                        terrain_tile_list = import_cut_graphics('../CS Game Project/Graphics/terrain/terrain_tiles.png')
                         print(val)
                         tile_surface = terrain_tile_list[int(val)]
                         sprite = StaticTile(tile_size,x,y,tile_surface)
                         sprite_group.add(sprite)
  
                     if type == 'coins':
-                        if val == '0': sprite = Coin(tile_size,x,y,'../Graphics/Treasure Hunters/Pirate Treasure/Sprites/Gold Coin/01.png')
+                        if val == '0': sprite = Coin(tile_size,x,y,'../CS Game Project/Graphics/coins/gold/0.png')
 
                     if type == 'bg trees':
-                        sprite = Tree(tile_size,x,y,'../Graphics/Treasure Hunters/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Regular 01.png',64)
+                        sprite = Tree(tile_size,x,y,'../CS Game Project/Graphics/terrain/palm_bg/bg_palm_1.png',64)
 
                     if type == 'enemies':
                         sprite = Enemy(tile_size,x,y)

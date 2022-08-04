@@ -7,9 +7,9 @@ from random import choice, randint
 
 class Sky:
     def __init__(self,horizon):
-        self.top = pygame.image.load('../Graphics/sky/sky_top.png').convert()
-        self.bottom = pygame.image.load('../Graphics/sky/sky_bottom.png').convert()
-        self.middle = pygame.image.load('../Graphics/sky/sky_middle.png').convert()
+        self.top = pygame.image.load('../CS Game Project/Graphics/decoration/sky/sky_top.png').convert()
+        self.bottom = pygame.image.load('../CS Game Project/Graphics/decoration/sky/sky_bottom.png').convert()
+        self.middle = pygame.image.load('../CS Game Project/Graphics/decoration/sky/sky_middle.png').convert()
         self.horizon = horizon
 
         #stretch
@@ -38,7 +38,7 @@ class Water:
         for tile in range(tile_x_amount):
             x = tile * water_tile_width + water_start
             y = top
-            sprite = AnimatedTile(192,x,y,'../Graphics/water')
+            sprite = AnimatedTile(192,x,y,'../CS Game Project/Graphics/decoration/water')
             self.water_sprites.add(sprite)
 
     def draw(self,surface,shift):
@@ -47,7 +47,7 @@ class Water:
 
 class Clouds:
     def __init__(self,horizon,level_width,cloud_number):
-        cloud_surf_list = import_folder('../Graphics/clouds')
+        cloud_surf_list = import_folder('../CS Game Project/Graphics/decoration/clouds')
         min_x = -screen_width
         max_x = level_width + screen_width
         min_y = 0
